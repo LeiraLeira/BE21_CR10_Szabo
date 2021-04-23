@@ -71,8 +71,8 @@
 
 
                     <tr>
-                        <th>Image</th>
-                        <td><input class='form-control' type="file" name="image" /></td>
+                        <th>Picture</th>
+                        <td><input class='form-control' type="file" name="picture" /></td>
                     </tr>
 
                     <tr>

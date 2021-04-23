@@ -7,9 +7,9 @@ if ($_GET['id']) {
     $result = $connect->query($sql);
     if ($result->num_rows == 1) {
         $data = $result->fetch_assoc();
-        $name = $data['name'];
-        $price = $data['price'];
-        $picture = $data['picture'];
+        $title = $data['title'];
+        $author_first_name = $data['author_first_name'];
+        $author_last_name = $data['author_last_name'];
     } else {
         header("location: error.php");
     }
@@ -38,16 +38,18 @@ if ($_GET['id']) {
     </head>
     <body>
         <fieldset>
-            <legend class='h2'>Update request <img class='img-thumbnail rounded-circle' src='pictures/<?php echo $picture ?>' alt="<?php echo $name ?>"></legend>
+            <legend class='h2'>Update request <img class='img-thumbnail rounded-circle' src='pictures/<?php echo $picture ?>' alt="<?php echo $title ?>"></legend>
             <form action="actions/a_update.php"  method="post" enctype="multipart/form-data">
                 <table class="table">
                     <!-- <tr>
                         <th>Name</th>
-                        <td><input class="form-control" type="text"  name="name" placeholder ="Product Name" value="<?php echo $name ?>"  /></td>
+                        <td><input class="form-control" type="text"  name="name" placeholder ="Product Name" value="
+                        "  /></td>
                     </tr> -->
                     <!-- <tr>
                         <th>Price</th>
-                        <td><input class="form-control" type= "number" name="price" step="any"  placeholder="Price" value ="<?php echo $price ?>" /></td>
+                        <td><input class="form-control" type= "number" name="price" step="any"  placeholder="Price" value ="
+                        " /></td>
                     </tr> -->
 
                     <tr>

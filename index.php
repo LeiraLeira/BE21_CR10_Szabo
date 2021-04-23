@@ -11,7 +11,7 @@ if(mysqli_num_rows($result)  > 0) {
             <a href='delete.php?id=" .$row['id']."'><button class='btn btn-danger btn-sm' type='button'>Delete</button></a></td>
             
             <td>" .$row['isbn_code']."</td>
-            <td><img class='img-thumbnail' src='" .$row['image']."'</td>
+            <td><img class='img-thumbnail' src='" .$row['picture']."'</td>
             <td>" .$row['title']."</td>
             <td>" .$row['author_first_name']."</td>
             <td>" .$row['author_last_name']."</td>
@@ -67,7 +67,7 @@ $connect->close();
                     <tr>
                         <th>id</th>
                         <th>isbn_code</th>
-                        <th>image</th>
+                        <th>picture</th>
                         <th>title</th>
                         <th>a_first_name</th>
                         <th>a_last_name</th>
