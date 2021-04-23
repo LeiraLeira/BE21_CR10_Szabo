@@ -3,7 +3,7 @@
 $hostname = "127.0.0.1";
 $username = "root";
 $password = "";
-$dbname = "restaurant02";
+$dbname = "cr10_szabo_biglibrary";
 
 // create connection
 $connect = mysqli_connect($hostname, $username, $password, $dbname);

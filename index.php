@@ -1,16 +1,28 @@
 <?php 
 require_once 'actions/db_connect.php';
-$sql = "SELECT * FROM products";
+$sql = "SELECT * FROM media";
 $result = mysqli_query($connect ,$sql);
 $tbody=''; //this variable will hold the body for the table
 if(mysqli_num_rows($result)  > 0) {     
     while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){         
-        $tbody .= "<tr>
-            <td><img class='img-thumbnail' src='pictures/" .$row['picture']."'</td>
-            <td>" .$row['name']."</td>
-            <td>" .$row['price']."</td>
+        $tbody .= "
+            <tr>
             <td><a href='update.php?id=" .$row['id']."'><button class='btn btn-primary btn-sm' type='button'>Edit</button></a>
             <a href='delete.php?id=" .$row['id']."'><button class='btn btn-danger btn-sm' type='button'>Delete</button></a></td>
+            
+            <td>" .$row['isbn_code']."</td>
+            <td><img class='img-thumbnail' src='" .$row['image']."'</td>
+            <td>" .$row['title']."</td>
+            <td>" .$row['author_first_name']."</td>
+            <td>" .$row['author_last_name']."</td>
+            <td>" .$row['short_description']."</td>
+            <td>" .$row['publisher_name']."</td>
+            <td>" .$row['publisher_size']."</td>
+            <td>" .$row['publisher_address']."</td>
+            <td>" .$row['publish_date']."</td>
+            <td>" .$row['media_type']."</td>
+            <td>" .$row['status']."</td>
+
             </tr>";
     };
 } else {
@@ -53,10 +65,19 @@ $connect->close();
             <table class='table table-striped'>
                 <thead class='table-success'>
                     <tr>
-                        <th>Picture</th>
-                        <th>Name</th>
-                        <th>price</th>
-                        <th>Action</th>
+                        <th>id</th>
+                        <th>isbn_code</th>
+                        <th>image</th>
+                        <th>title</th>
+                        <th>a_first_name</th>
+                        <th>a_last_name</th>
+                        <th>short_description</th>
+                        <th>p_name</th>
+                        <th>p_size</th>
+                        <th>p_address</th>
+                        <th>p_date</th>
+                        <th>media_type</th>
+                        <th>status</th>
                     </tr>
                 </thead>
                 <tbody>
