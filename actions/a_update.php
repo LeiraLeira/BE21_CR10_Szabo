@@ -3,18 +3,31 @@ require_once 'db_connect.php';
 require_once 'file_upload.php';
 
 if ($_POST) {    
-    $name = $_POST['name'];
-    $price = $_POST['price'];
+    // $name = $_POST['name'];
+    // $price = $_POST['price'];
     $id = $_POST['id'];
+
+    $title = $_POST['title'];
+    $author_first_name = $_POST['author_first_name'];
+    $author_last_name = $_POST['author_last_name'];
+    $short_description = $_POST['short_description'];
+    $publisher_name = $_POST['publisher_name'];
+    $publisher_size = $_POST['publisher_size'];
+    $publisher_address = $_POST['publisher_address'];
+
+
     //variable for upload pictures errors is initialized
     $uploadError = '';
 
     $picture = file_upload($_FILES['picture']);//file_upload() called  
+
     if($picture->error===0){
         ($_POST["picture"]=="product.png")?: unlink("../pictures/$_POST[picture]");           
-        $sql = "UPDATE products SET name = '$name', price = $price, picture = '$picture->fileName' WHERE id = {$id}";
+        // $sql = "UPDATE media SET name = '$name', price = $price, picture = '$picture->fileName' WHERE id = {$id}";
+        $sql = "UPDATE media SET title = '$title', author_first_name = '$author_first_name', author_last_name = '$author_first_name', image = '$picture->fileName' WHERE id = {$id}";
     }else{
-        $sql = "UPDATE products SET name = '$name', price = $price WHERE id = {$id}";
+        // $sql = "UPDATE media SET name = '$name', price = $price WHERE id = {$id}";
+        $sql = "UPDATE media SET title = '$title', author_first_name = '$author_first_name', author_last_name = '$author_first_name', image = '$picture->fileName' WHERE id = {$id}";
     }    
     if ($connect->query($sql) === TRUE) {
         $class = "success";

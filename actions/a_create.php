@@ -23,9 +23,9 @@ if ($_POST) {
 
     $uploadError = '';
     //this function exists in the service file upload.
-    $image = file_upload($_FILES['image']);  
+    $picture = file_upload($_FILES['picture']);  
    
-    $sql = "INSERT INTO media (title, author_first_name, author_last_name, short_description, publisher_name, publisher_size, publisher_address, media_type, status, image) VALUES ('$title', '$author_first_name', '$author_last_name', 'short_description', '$publisher_name', '$publisher_size', '$publisher_address', '$media_type', '$status', '$image->fileName')";
+    $sql = "INSERT INTO media (title, author_first_name, author_last_name, short_description, publisher_name, publisher_size, publisher_address, media_type, status, image) VALUES ('$title', '$author_first_name', '$author_last_name', 'short_description', '$publisher_name', '$publisher_size', '$publisher_address', '$media_type', '$status', '$picture->fileName')";
 
     if ($connect->query($sql) === true) {
         $class = "success";
@@ -41,7 +41,7 @@ if ($_POST) {
             <td> $media_type </td>
             
             </tr></table><hr>";
-        $uploadError = ($image->error !=0)? $image->ErrorMessage :'';
+        $uploadError = ($picture->error !=0)? $picture->ErrorMessage :'';
     } else {
         $class = "danger";
         $message = "Error while creating record. Try again: <br>" . $connect->error;

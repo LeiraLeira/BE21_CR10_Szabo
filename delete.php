@@ -3,13 +3,24 @@ require_once 'actions/db_connect.php';
 
 if ($_GET['id']) {
     $id = $_GET['id'];
-    $sql = "SELECT * FROM products WHERE id = {$id}" ;
+
+    // $title = $_GET['title'];
+    // $author_first_name = $_GET['author_first_name'];
+    // $author_last_name = $_GET['author_last_name'];
+    // $short_description = $_GET['short_description'];
+    // $publisher_name = $_GET['publisher_name'];
+    // $publisher_size = $_GET['publisher_size'];
+    // $publisher_address = $_GET['publisher_address'];
+
+
+
+    $sql = "SELECT * FROM media WHERE id = {$id}" ;
     $result = $connect->query($sql);
     $data = $result->fetch_assoc();
     if ($result->num_rows == 1) {
-        $name = $data['name'];
-        $price = $data['price'];
-        $picture = $data['picture'];
+        $title = $data['title'];
+        $author_first_name = $data['author_first_name'];
+        $author_last_name = $data['author_last_name'];
     } else {
         header("location: error.php");
     }
@@ -40,11 +51,11 @@ if ($_GET['id']) {
     </head>
     <body>
         <fieldset>
-            <legend class='h2 mb-3'>Delete request <img class='img-thumbnail rounded-circle' src='pictures/<?php echo $picture ?>' alt="<?php echo $name ?>"></legend>
+            <legend class='h2 mb-3'>Delete request <img class='img-thumbnail rounded-circle' src='pictures/<?php echo $picture ?>' alt="<?php echo $title ?>"></legend>
             <h5>You have selected the data below:</h5>
             <table class="table w-75 mt-3">
                 <tr>
-                    <td><?php echo $name?></td>
+                    <td><?php echo $title?></td>
                 </tr>
             </table>
 
