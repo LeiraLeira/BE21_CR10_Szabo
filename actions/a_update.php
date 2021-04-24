@@ -75,8 +75,9 @@ if ($_POST) {
             <div class="alert alert-<?php echo $class;?>" role="alert">
                 <p><?php echo ($message) ?? ''; ?></p>
                 <p><?php echo ($uploadError) ?? ''; ?></p>
-                <a href='../update.php?id=<?=$id;?>'><button class="btn btn-warning" type='button'>Back</button></a>
-                <a href='../index.php'><button class="btn btn-success" type='button'>Home</button></a>
+                <a href='../update.php?id=<?=$id;?>'><button class="btn" style='background-color: #7828FD; color: white;' type='button'>Back</button></a>
+                <a href='../home.php'><button class="btn" style='background-color: #FA5C65; color: white;' type='button'>Home</button></a>
+                <a href='../index.php'><button class="btn" style='background-color: #162C9a; color: white;' type='button'>Show Media</button></a>
             </div>
         </div>
     </body>

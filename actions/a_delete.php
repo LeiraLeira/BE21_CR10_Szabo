@@ -34,9 +34,10 @@ if ($_POST) {
             </div>
             <div class="alert alert-<?=$class;?>" role="alert">
                 <p><?=$message;?></p>
-                <a href='../index.php'><button class="btn btn-success" type='button'>Home</button></a>
+                <a href='../home.php'><button class="btn" style='background-color: #7828FD; color: white;' type='button'>Home</button></a>
+                <a href='../index.php'><button class="btn" style='background-color: #162C9a; color: white;' type='button'>Back</button></a>
             </div>
         </div>
-        
+
     </body>
 </html>

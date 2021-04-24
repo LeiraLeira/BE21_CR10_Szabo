@@ -35,9 +35,9 @@ $connect->close();
 <!DOCTYPE html>
 <html lang="en">
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light" >
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Welcome to the BIG LIBRARY</a>
+    <a class="navbar-brand" href="#">BIG LIBRARY</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -52,19 +52,11 @@ $connect->close();
         <li class="nav-item">
           <a class="nav-link" href="create.php">Add Media</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contact.php">Contact</a>
+        <li class="nav-item" style="margin-right: 10rem;">
+          <a class="nav-link"  href="contact.php">Contact Us</a>
         </li>
-        <!-- <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown link
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li> -->
+
+      </form>
       </ul>
     </div>
   </div>
@@ -96,8 +88,7 @@ $connect->close();
     <body>
         <div class="manageProduct w-75 mt-3">    
 
-
-
+    <h1 style="text-align: center; margin-bottom: 2rem">Welcome to our library</h1>
 
     <div class="container">
       <div class="row">
@@ -107,25 +98,25 @@ $connect->close();
         <div class="card-body">
           <h5 class="card-title">Our Media Portfolio</h5>
           <p class="card-text">Here you can browse through our big media Portfolio of 100 Million products.</p>
-          <a href="index.php" class="btn btn-primary" >Show Media</a>
+          <a href="index.php" class="btn" style="background-color: #7828FD; color: white;">Show Media</a>
         </div>
         </div>
 
         <div class="card" style="width: 18rem;">
-        <img src="https://cdn.pixabay.com/photo/2016/09/10/17/18/book-1659717__340.jpg" class="card-img-top" alt="...">
+        <img src="https://cdn.pixabay.com/photo/2012/03/04/00/17/books-21849__340.jpg" class="card-img-top" alt="...">
         <div class="card-body">
-        <h5 class="card-title">Our Media Portfolio</h5>
+        <h5 class="card-title">Add Media</h5>
         <p class="card-text">Here you can add to our big media Portfolio of 100 Million products.</p>
-        <a href="create.php" class="btn btn-primary" >Add Media</a>
+        <a href="create.php" class="btn" style="background-color: #7828FD; color: white;">Add Media</a>
         </div>
         </div>
 
         <div class="card" style="width: 18rem;">
-        <img src="https://cdn.pixabay.com/photo/2016/09/10/17/18/book-1659717__340.jpg" class="card-img-top" alt="...">
+        <img src="https://cdn.pixabay.com/photo/2015/07/31/11/45/library-869061__340.jpg" class="card-img-top" alt="...">
         <div class="card-body">
-        <h5 class="card-title">Our Media Portfolio</h5>
+        <h5 class="card-title">Contact Us</h5>
         <p class="card-text">Do you have any questions, suggestions? Feel free to cantact us.</p>
-        <a href="create.php" class="btn btn-primary" >Contact Us</a>
+        <a href="create.php" class="btn" style="background-color: #7828FD; color: white;">Contact Us</a>
         </div>
         </div>
 
@@ -133,39 +124,7 @@ $connect->close();
     </div>
 
 
-
-
-
-
-
-
-            <!-- <div class='mb-3'>
-                <a href= "index.php"><button class='btn btn-primary'type="button" >Show Media</button></a>
-                <a href= "create.php"><button class='btn btn-primary'type="button" >Add Media</button></a>
-            </div> -->
-            <!-- <p class='h2'>Media Info</p>
-            <table class='table table-striped'>
-                <thead class='table-success'>
-                    <tr>
-                        <th>id</th>
-                        <th>isbn_code</th>
-                        <th>picture</th>
-                        <th>title</th>
-                        <th>a_first_name</th>
-                        <th>a_last_name</th>
-                        <th>short_description</th>
-                        <th>p_name</th>
-                        <th>p_size</th>
-                        <th>p_address</th>
-                        <th>p_date</th>
-                        <th>media_type</th>
-                        <th>status</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?= $tbody;?>
-                </tbody>
-            </table> -->
         </div>
+
     </body>
 </html>

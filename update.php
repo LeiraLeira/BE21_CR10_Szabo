@@ -104,8 +104,8 @@ if ($_GET['id']) {
                     <tr>
                         <input type= "hidden" name= "id" value= "<?php echo $data['id'] ?>" />
                         <input type= "hidden" name= "picture" value= "<?php echo $data['picture'] ?>" />
-                        <td><button class="btn btn-success" type= "submit">Save Changes</button></td>
-                        <td><a href= "index.php"><button class="btn btn-warning" type="button">Back</button></a></td>
+                        <td><button class="btn" style='background-color: #7828FD; color: white;' type= "submit">Save Changes</button></td>
+                        <td><a href= "index.php"><button class="btn" style='background-color: #FA5C65; color: white;' type="button">Back</button></a></td>
                     </tr>
                 </table>
             </form>

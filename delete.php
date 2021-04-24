@@ -63,8 +63,8 @@ if ($_GET['id']) {
             <form action ="actions/a_delete.php" method="post">
                 <input type="hidden" name="id" value="<?php echo $id ?>" />
                 <input type="hidden" name="picture" value="<?php echo $picture ?>" />
-                <button class="btn btn-danger" type="submit">Yes, delete it!</button>
-                <a href="index.php"><button class="btn btn-warning" type="button">No, go back!</button></a>
+                <button class="btn" style='background-color: #7828FD; color: white;' type="submit">Yes, delete it!</button>
+                <a href="index.php"><button class="btn" style='background-color: #FA5C65; color: white;' type="button">No, go back!</button></a>
             </form>
         </fieldset>
     </body>

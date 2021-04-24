@@ -7,8 +7,8 @@ if(mysqli_num_rows($result)  > 0) {
     while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){         
         $tbody .= "
             <tr>
-            <td><a href='update.php?id=" .$row['id']."'><button class='btn btn-primary btn-sm' type='button'>Edit</button></a>
-            <a href='delete.php?id=" .$row['id']."'><button class='btn btn-danger btn-sm' type='button'>Delete</button></a></td>
+            <td><a href='update.php?id=" .$row['id']."'><button class='btn btn-sm' type='button' style='background-color: #7828FD; color: white;'>Edit</button></a>
+            <a href='delete.php?id=" .$row['id']."'><button class='btn btn-sm' style='background-color: #FA5C65; color: white;' type='button'>Delete</button></a></td>
             
             <td>" .$row['isbn_code']."</td>
             <td><img class='img-thumbnail' src='pictures/" .$row['image']."'</td>
@@ -35,7 +35,7 @@ $connect->close();
 <!DOCTYPE html>
 <html lang="en">
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light" >
   <div class="container-fluid">
     <a class="navbar-brand" href="#">BIG LIBRARY</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,24 +44,19 @@ $connect->close();
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="home.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
+          <a class="nav-link" href="index.php">Show Media</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
+          <a class="nav-link" href="create.php">Add Media</a>
         </li>
-        <!-- <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown link
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li> -->
+        <li class="nav-item" style="margin-right: 10rem;">
+          <a class="nav-link"  href="contact.php">Contact Us</a>
+        </li>
+
+      </form>
       </ul>
     </div>
   </div>
@@ -93,8 +88,8 @@ $connect->close();
     <body>
         <div class="manageProduct w-75 mt-3">    
             <div class='mb-3'>
-                <a href= "create.php"><button class='btn btn-primary'type="button" >Add product</button></a>
-                <a href= "create.php"><button class='btn btn-primary'type="button" >Show Media</button></a>
+                <a href= "create.php"><button class='btn' type="button" style="background-color: #7828FD; color: white;">Add Media</button></a>
+                <!-- <a href= "create.php"><button class='btn' type="button" style="background-color: #7828FD; color: white;">Show Media</button></a> -->
             </div>
             <p class='h2'>Media Info</p>
             <table class='table table-striped'>

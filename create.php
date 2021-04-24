@@ -76,8 +76,11 @@
                     </tr>
 
                     <tr>
-                        <td><button class='btn btn-success' type="submit">Insert Product</button></td>
-                        <td><a href="index.php"><button class='btn btn-warning' type="button">Home</button></a></td>
+                        <td><button class='btn' style='background-color: #7828FD; color: white;' type="submit">Insert Media</button></td>
+                        <td><a href="home.php"><button class='btn' style='background-color: #FA5C65; color: white;' type="button">Home</button></a>
+                        <a href='index.php'><button class="btn" style='background-color: #162C9a; color: white;' type='button'>Show Media</button></a>
+                        </td>
+
                     </tr>
                 </table>
             </form>
