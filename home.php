@@ -88,7 +88,7 @@ $connect->close();
     <body>
         <div class="manageProduct w-75 mt-3">    
 
-    <h1 style="text-align: center; margin-bottom: 2rem">Welcome to our library</h1>
+    <h1 style="text-align: center; margin-bottom: 2rem">Welcome to our library!</h1>
 
     <div class="container">
       <div class="row">
