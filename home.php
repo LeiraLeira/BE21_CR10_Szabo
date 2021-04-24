@@ -37,20 +37,23 @@ $connect->close();
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">BIG LIBRARY</a>
+    <a class="navbar-brand" href="#">Welcome to the BIG LIBRARY</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="home.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
+          <a class="nav-link" href="index.php">Show Media</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
+          <a class="nav-link" href="create.php">Add Media</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="create.php">Contact</a>
         </li>
         <!-- <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -93,10 +96,11 @@ $connect->close();
     <body>
         <div class="manageProduct w-75 mt-3">    
             <div class='mb-3'>
-                <a href= "create.php"><button class='btn btn-primary'type="button" >Add product</button></a>
-                <a href= "create.php"><button class='btn btn-primary'type="button" >Show Media</button></a>
+
+                <a href= "index.php"><button class='btn btn-primary'type="button" >Show Media</button></a>
+                <a href= "create.php"><button class='btn btn-primary'type="button" >Add Media</button></a>
             </div>
-            <p class='h2'>Media Info</p>
+            <!-- <p class='h2'>Media Info</p>
             <table class='table table-striped'>
                 <thead class='table-success'>
                     <tr>
@@ -118,7 +122,7 @@ $connect->close();
                 <tbody>
                     <?= $tbody;?>
                 </tbody>
-            </table>
+            </table> -->
         </div>
     </body>
 </html>

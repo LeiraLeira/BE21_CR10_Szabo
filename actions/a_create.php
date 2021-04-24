@@ -25,7 +25,7 @@ if ($_POST) {
     //this function exists in the service file upload.
     $picture = file_upload($_FILES['picture']);  
    
-    $sql = "INSERT INTO media (title, author_first_name, author_last_name, short_description, publisher_name, publisher_size, publisher_address, media_type, status, image) VALUES ('$title', '$author_first_name', '$author_last_name', 'short_description', '$publisher_name', '$publisher_size', '$publisher_address', '$media_type', '$status', '$picture->fileName')";
+    $sql = "INSERT INTO media (id, title, author_first_name, author_last_name, short_description, publisher_name, publisher_size, publisher_address, media_type, status, image) VALUES (null, '$title', '$author_first_name', '$author_last_name', 'short_description', '$publisher_name', '$publisher_size', '$publisher_address', '$media_type', '$status', '$picture->fileName')";
 
     if ($connect->query($sql) === true) {
         $class = "success";

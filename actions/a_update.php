@@ -24,10 +24,26 @@ if ($_POST) {
     if($picture->error===0){
         ($_POST["picture"]=="product.png")?: unlink("../pictures/$_POST[picture]");           
         // $sql = "UPDATE media SET name = '$name', price = $price, picture = '$picture->fileName' WHERE id = {$id}";
-        $sql = "UPDATE media SET title = '$title', author_first_name = '$author_first_name', author_last_name = '$author_first_name', image = '$picture->fileName' WHERE id = {$id}";
+        $sql = "UPDATE media SET title = '$title', 
+                                -- author_first_name = '$author_first_name', 
+                                -- author_last_name = '$author_last_name', 
+                                -- short_description = '$short_description', 
+                                -- publisher_name = '$publisher_name',
+                                -- publisher_size = '$publisher_size',
+                                -- publisher_address = '$publisher_address';
+
+                                image = '$picture->fileName' WHERE id = {$id}";
     }else{
         // $sql = "UPDATE media SET name = '$name', price = $price WHERE id = {$id}";
-        $sql = "UPDATE media SET title = '$title', author_first_name = '$author_first_name', author_last_name = '$author_first_name', image = '$picture->fileName' WHERE id = {$id}";
+        $sql = "UPDATE media SET title = '$title', 
+                                -- author_first_name = '$author_first_name', 
+                                -- author_last_name = '$author_last_name', 
+                                -- short_description = '$short_description', 
+                                -- publisher_name = '$publisher_name',
+                                -- publisher_size = '$publisher_size',
+                                -- publisher_address = '$publisher_address';
+
+                                image = '$picture->fileName' WHERE id = {$id}";
     }    
     if ($connect->query($sql) === TRUE) {
         $class = "success";
