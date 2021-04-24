@@ -53,7 +53,7 @@ $connect->close();
           <a class="nav-link" href="create.php">Add Media</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="create.php">Contact</a>
+          <a class="nav-link" href="contact.php">Contact</a>
         </li>
         <!-- <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -95,11 +95,54 @@ $connect->close();
     </head>
     <body>
         <div class="manageProduct w-75 mt-3">    
-            <div class='mb-3'>
 
+
+
+
+    <div class="container">
+      <div class="row">
+
+        <div class="card" style="width: 18rem;">
+        <img src="https://cdn.pixabay.com/photo/2016/09/08/22/43/books-1655783__340.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Our Media Portfolio</h5>
+          <p class="card-text">Here you can browse through our big media Portfolio of 100 Million products.</p>
+          <a href="index.php" class="btn btn-primary" >Show Media</a>
+        </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+        <img src="https://cdn.pixabay.com/photo/2016/09/10/17/18/book-1659717__340.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        <h5 class="card-title">Our Media Portfolio</h5>
+        <p class="card-text">Here you can add to our big media Portfolio of 100 Million products.</p>
+        <a href="create.php" class="btn btn-primary" >Add Media</a>
+        </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+        <img src="https://cdn.pixabay.com/photo/2016/09/10/17/18/book-1659717__340.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        <h5 class="card-title">Our Media Portfolio</h5>
+        <p class="card-text">Do you have any questions, suggestions? Feel free to cantact us.</p>
+        <a href="create.php" class="btn btn-primary" >Contact Us</a>
+        </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+            <!-- <div class='mb-3'>
                 <a href= "index.php"><button class='btn btn-primary'type="button" >Show Media</button></a>
                 <a href= "create.php"><button class='btn btn-primary'type="button" >Add Media</button></a>
-            </div>
+            </div> -->
             <!-- <p class='h2'>Media Info</p>
             <table class='table table-striped'>
                 <thead class='table-success'>
